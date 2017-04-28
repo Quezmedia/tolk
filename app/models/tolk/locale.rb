@@ -54,7 +54,7 @@ module Tolk
       end
 
       def dump_all(*args)
-        secondary_locales.each { |locale| locale.dump(*args) }
+        all.each { |locale| locale.dump(*args) }
       end
 
       def dump_yaml(name, *args)

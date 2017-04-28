@@ -13,8 +13,5 @@ module Tolk
       instance_exec(nil, &self.authenticator) if self.authenticator && self.authenticator.respond_to?(:instance_exec)
     end
 
-    def ensure_no_primary_locale
-      redirect_to tolk.locales_path if @locale.primary?
-    end
   end
 end
